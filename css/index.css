@@ -71,46 +71,77 @@ h1, h2, h3, h4, h5 {
 	margin: 0 auto;
 }
 /* NAVIGATION */
-nav a{
-	margin: 10px;
-	text-decoration: none;
-	color: #c7c7c7;
-    padding: 20px;
-}
-@media (max-width: 500px) {
-    nav {
+header {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    }
-    nav a {
-    border-bottom: 1px solid black;
-    display: inline-block;
-    width: 100%;
-    text-align: center;
-    }
-  
-}
-
-@media (max-width: 800px) {
-    nav {
-    align-items: center;
-    }
-    .logo {
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     padding-top: 20px;
 }
+
+nav a {
+	/* margin: 10px; */
+	text-decoration: none;
+	color: #c7c7c7;
+    padding: 20px;
+    align-content: center;
 }
-      
+
+
+
+@media (max-width: 500px) {
+    header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    }
+    nav {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+    nav a {
+    border-bottom: 1px solid black;
+    /* display: block; */
+    width: 100%;
+    text-align: center;
+    }
+    .image1 {
+    border-bottom: 1px solid grey;
+    padding-bottom: 20px;
+    width: 100%;
+    text-align:center;
+    }
+    .container{
+        width: 100%;
+    }
+}
+
+@media (max-width: 800px) {
+    .image1 {
+    flex-direction: column-reverse;
+    padding-bottom: 20px;
+    }
+    header {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        width: 100%;
+            }
+    .container {
+        width: 100%;
+    }
+    
+}
+       
 
 /* HEADER */
 main{
-    padding: 120px 50px 30px;
+    padding: 100px 50px 30px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    
 }
 
 @media (max-width: 500px) {
@@ -148,10 +179,15 @@ a.btn {
 .middle-img {
     margin-top: 10px;
 }
+@media (max-width: 500px) {
+    .middle-image {
+        width: 100%;
+    }
+}
 
 @media (max-width: 800px) {
     .middle-img {
-        flex: 1 1;
+        max-width: 100%;
     }
 }
 
@@ -172,16 +208,17 @@ a.btn {
 @media (max-width: 500px) {
     .last-content {
         flex-direction: column;
-        padding: 20px;
         }
 }
 
 .last-content > div {
     padding-right: 20px;
 }
+
 /* FOOTER */
 .bottom {
     text-align: center;
+    
 }
 .footer {
     margin-top: 20px;
